@@ -140,7 +140,7 @@
 		</repository>
 	</repositories>
 	<build>
-		<finalName>orderpayment</finalName>
+		<finalName>ROOT</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>
