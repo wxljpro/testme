@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="${mybatis.generator.classPathEntry}" />
+	<context id="orderpayment-test" targetRuntime="MyBatis3"
+		defaultModelType="flat">
+		<property name="targetProject" value="passport\src\main\java" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.8.88:3306/orderpayment?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="123456">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.xiaoyi.orderpayment.model"
+			targetProject="src\main\java">
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="mapper"
+			targetProject="src\main\resources">
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.xiaoyi.orderpayment.dao" targetProject="src\main\java">
+		</javaClientGenerator>
+
+		<table tableName="tb_product_info" domainObjectName="ProductInfo"
+			enableDeleteByPrimaryKey="false" enableDeleteByExample="false"
+			selectByPrimaryKeyQueryId="product_info_select_by_id"
+			selectByExampleQueryId="product_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+			<!-- 
+			<ignoreColumn column="other_info" />
+			 -->
+		</table>
+		<table tableName="tb_order_info" domainObjectName="OrderInfo"
+			selectByPrimaryKeyQueryId="order_info_select_by_id"
+			selectByExampleQueryId="order_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="tb_app_info" domainObjectName="AppInfo"
+			selectByPrimaryKeyQueryId="app_info_select_by_id"
+			selectByExampleQueryId="app_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="tb_rechargecard_info" domainObjectName="RechargeCardInfo"
+			selectByPrimaryKeyQueryId="rechargecard_info_select_by_id"
+			selectByExampleQueryId="rechargecard_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="tb_braintree_plans_info" domainObjectName="BraintreePlanInfo"
+			selectByPrimaryKeyQueryId="braintree_plan_info_select_by_id"
+			selectByExampleQueryId="braintree_plan_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<!-- 
+		<table tableName="tb_braintree_paymentmethods_info" domainObjectName="BraintreePaymentMethodInfo"
+			selectByPrimaryKeyQueryId="braintree_paymentmethod_info_select_by_id"
+			selectByExampleQueryId="braintree_paymentmethod_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		
+		<table tableName="tb_auth_info" domainObjectName="AuthInfo"
+			selectByPrimaryKeyQueryId="auth_info_select_by_id"
+			selectByExampleQueryId="auth_info_select_by_example">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		
+		</table>
+		 -->
+	</context>
+</generatorConfiguration>
