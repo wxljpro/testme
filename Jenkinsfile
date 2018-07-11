@@ -58,6 +58,7 @@
         stage('builde interface'){
             steps{
                 sh "mvn -f ${params.pomPath} clean install -Dautoconfig.skip=true -Dmaven.test.skip=true"
+				echo "ok"
             }
         }
     }
